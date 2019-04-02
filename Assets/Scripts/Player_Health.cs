@@ -10,7 +10,7 @@ public class Player_Health : MonoBehaviour {
 
     public float hpMax = 100;
     public float currentHP;
-    public Image deathScreen;
+    public GameObject deathScreen;
 
 
     Image UI_Health;
@@ -32,7 +32,8 @@ public class Player_Health : MonoBehaviour {
         UI_ScreenBlood = GameObject.Find("UI_ScreenBlood").GetComponent<Image>();
         UI_ScreenBlood_Color = UI_ScreenBlood.color;
         UI_ScreenBlood_Transform = GameObject.Find("UI_ScreenBlood").GetComponent<Transform>();
-        deathScreen.gameObject.SetActive(false);
+        deathScreen = GameObject.Find("DeathScreen");
+        deathScreen.SetActive(false);
     }
 	
 
@@ -68,7 +69,7 @@ public class Player_Health : MonoBehaviour {
     private void Die(){
         currentHP = 0;
         UI_Health.fillAmount = 0f;
-        deathScreen.gameObject.SetActive(true);
+        deathScreen.SetActive(true);
         Time.timeScale = 0f;
         isDeath = true;
     }
