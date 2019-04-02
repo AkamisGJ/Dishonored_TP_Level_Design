@@ -48,7 +48,10 @@ public class Player_Health : MonoBehaviour {
 
     }
 
-
+    public void HealPlayer(float healAmmont){
+        currentHP += healAmmont;
+        Debug.Log("New HP : " + currentHP);
+    }
 
 
     public void DamagePlayer(int damages)
