@@ -404,7 +404,7 @@ public class InteractableObject : MonoBehaviour {
         {
             if (objectType == 0) // Rat
             {
-                stringInteraction = "<b>Right click</b>";
+                stringInteraction = "<b>Press F</b>";
                 stringDescription = "Go into the rat !";
             }
         }

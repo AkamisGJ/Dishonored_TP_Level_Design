@@ -33,6 +33,7 @@ public class Player_Health : MonoBehaviour {
         UI_ScreenBlood_Color = UI_ScreenBlood.color;
         UI_ScreenBlood_Transform = GameObject.Find("UI_ScreenBlood").GetComponent<Transform>();
         deathScreen = GameObject.Find("DeathScreen");
+        if(deathScreen != null)
         deathScreen.SetActive(false);
     }
 	
@@ -69,8 +70,9 @@ public class Player_Health : MonoBehaviour {
     private void Die(){
         currentHP = 0;
         UI_Health.fillAmount = 0f;
-        deathScreen.SetActive(true);
         isDeath = true;
+        if(deathScreen != null)
+        deathScreen.SetActive(true);
     }
 
 

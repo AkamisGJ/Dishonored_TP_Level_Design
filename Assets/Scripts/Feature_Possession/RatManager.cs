@@ -31,7 +31,7 @@ public class RatManager : MonoBehaviour
     }
 
     void Update(){
-        if(Input.GetKeyDown(KeyCode.Alpha3) && m_canDieRat){
+        if(Input.GetKeyDown(KeyCode.F) && m_canDieRat){
             RaycastHit hit;
             if(!Physics.SphereCast(transform.position + m_checkTopCollider.m_baseOffset, m_checkTopCollider.m_radius, Vector3.up, out hit, m_checkTopCollider.m_maxDistance, m_checkTopCollider.m_checkTopColider)){
                 DisableRat();

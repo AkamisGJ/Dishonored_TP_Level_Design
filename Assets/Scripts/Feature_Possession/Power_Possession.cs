@@ -28,7 +28,7 @@ public class Power_Possession : MonoBehaviour
             Debug.DrawRay(ray.origin, ray.direction * m_maxDistanceToPossession, Color.white, 0.025f);
         }
 
-        if(Input.GetKey(KeyCode.Alpha3)){
+        if(Input.GetKey(KeyCode.F)){
             if(Physics.Raycast(ray.origin, ray.direction, out hit, m_maxDistanceToPossession, m_objectToTouch)){
                 RatManager rm = hit.collider.gameObject.GetComponent<RatManager>();
                 if(rm != null){
