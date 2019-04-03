@@ -48,7 +48,6 @@ public class Interaction : MonoBehaviour {
             canInteract = false;
         }
 
-
         if (!air_Assassination.isAssassinating && canInteract && Physics.Raycast(transform.position, transform.forward, out hitInteract, 3))
         {
             if (hitInteract.transform.GetComponent<InteractableObject>() && hitInteract.transform.GetComponent<InteractableObject>().enabled)
