@@ -70,7 +70,6 @@ public class Player_Health : MonoBehaviour {
         currentHP = 0;
         UI_Health.fillAmount = 0f;
         deathScreen.SetActive(true);
-        Time.timeScale = 0f;
         isDeath = true;
     }
 
