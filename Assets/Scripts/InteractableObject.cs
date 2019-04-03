@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableObject : MonoBehaviour {
 
-    public enum Description { Door, Openable, Bottle, Fruit, Paper, Candle, Elixir, Pistol, Body, Audiograph, Coin };
+    public enum Description { Door, Openable, Bottle, Fruit, Paper, Candle, Elixir, Pistol, Body, Audiograph, Coin, Rat };
     public Description d;
     public int objectType = 0;
     //Openable  0   Window;
@@ -398,6 +398,14 @@ public class InteractableObject : MonoBehaviour {
                         stringInteractionOption = "<b>F</b> <i>Keyhole Peek</i>";
                     }
                 }
+            }
+        }
+        else if (d == Description.Rat)
+        {
+            if (objectType == 0) // Rat
+            {
+                stringInteraction = "<b>Right click</b>";
+                stringDescription = "Go into the rat !";
             }
         }
     }
