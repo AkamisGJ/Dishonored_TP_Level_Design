@@ -23,5 +23,15 @@ public class Pocket : MonoBehaviour {
             }
             Destroy(other.gameObject);
         }
+
+         if(other.GetComponent<InteractableObject>() && other.GetComponent<InteractableObject>().isPickup) //Elixir de vie
+        {
+            InteractableObject incommingObject = other.GetComponent<InteractableObject>();
+            if(incommingObject.d == InteractableObject.Description.Fruit){
+                float healAmont = incommingObject.GetComponent<HealPotion>().HealAmmont;
+                Player_Health.HealPlayer(healAmont);
+            }
+            Destroy(other.gameObject);
+        }
     }
 }
